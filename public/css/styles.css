@@ -800,3 +800,93 @@ img {
     grid-template-columns: 1fr;
   }
 }
+
+/* Tablets / iPads (max-width: 980px) */
+
+@media (max-width: 980px) {
+  /* Fix 1: Stop hero section from overflowing and causing sideways scroll */
+  .hero-inner {
+    flex-direction: column-reverse; /* Stacks column and keeps image at the top */
+    gap: 40px;
+  }
+  
+  .hero-media {
+    width: 100%; /* Overrides the fixed 600px width */
+  }
+
+  /* Fix 3: Allow the homepage nav links to wrap instead of overlapping */
+  .site-header--home .container,
+  .site-header--home .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .site-header--home .nav-links {
+    gap: 12px; /* Adds breathing room when they wrap */
+    padding-top: 12px;
+  }
+}
+
+
+/* Mobile Landscape / Small Tablets (768px) */
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  .section {
+    padding: 64px 0;
+  }
+
+  .feature-row {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-bottom: 64px;
+  }
+
+  .feature-row--reverse .feature-media {
+    order: 0;
+  }
+
+  /* Fix 2: Include .playbook-grid so feature cards don't squash */
+  .card-grid,
+  .playbook-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Mobile Phones (480px) */
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 34px;
+  }
+
+  /* Fix 2 (Continued): Stack cards completely into 1 column on phones */
+  .card-grid,
+  .playbook-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-body {
+    padding: 32px 24px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
