@@ -33,3 +33,10 @@ form.addEventListener('submit', async (event) => {
     button.disabled = false;
   }
 });
+// Capture the form load time for the hidden timestamp field
+document.addEventListener('DOMContentLoaded', () => {
+  const loadTimeField = document.getElementById('form_loaded_at');
+  if (loadTimeField) {
+    loadTimeField.value = Date.now();
+  }
+});
