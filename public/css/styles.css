@@ -890,3 +890,11 @@ img {
     grid-template-columns: 1fr;
   }
 }
+
+/* Visually hidden elements for accessibility purposes */
+.visually-hidden {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  pointer-events: none;
+}

@@ -37,6 +37,15 @@
     <section class="section">
       <div class="container contact-layout">
         <form class="contact-form" id="contact-form" action="/contact" method="post">
+          <!-- Honeypot Field -->
+          <div class="form-group visually-hidden" aria-hidden="true">
+            <label for="address_line">Address Line</label>
+            <input type="text" name="address_line" id="address_line" tabindex="-1" autocomplete="off">
+          </div>
+
+          <!-- Timestamp Field -->
+          <input type="hidden" name="form_loaded_at" id="form_loaded_at">
+          
           <label for="name">Your name</label>
           <input type="text" id="name" name="name" required>
 
